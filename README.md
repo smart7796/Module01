@@ -1,37 +1,89 @@
-<div align="center">
+# 🧱 Stack Overflow：程式碼疊磚遊戲
 
-# 🎉 Congratulations smart7796! 🎉
+這是一款以程式設計主題為風格的方塊遊戲，玩家需要控制落下的方塊，將它們排列成指定的錯誤模式，並在堆疊達到上限前清除目標圖樣。
 
-<img src="https://octodex.github.com/images/welcometocat.png" height="200px" />
+遊戲的核心概念是：
+- 你需要觀察右側的「目標圖樣」
+- 利用左右移動、旋轉和快速下落來擺放方塊
+- 當符合目標錯誤圖樣時，清除它並獲得分數
+- 若堆疊碰到頂部，遊戲結束
 
-### 🌟 You've successfully completed the exercise! 🌟
+## 🎮 遊戲目標
 
-## 🚀 Share Your Success!
+在這個遊戲中，右側會顯示一個 5x5 的錯誤模式，例如：
+- Null Pointer
+- Memory Leak
+- Off By One
+- Race Condition
+- Infinite Loop
+- Syntax Error
+- Type Mismatch
 
-**Show off your new skills and inspire others!**
+你的任務是將落下的方塊拼出相同的圖案，讓它符合目標模式，之後就能清除並累積分數。
 
-<a href="https://twitter.com/intent/tweet?text=I%20just%20completed%20the%20%22Introduction%20to%20Git%22%20GitHub%20Skills%20hands-on%20exercise!%20%F0%9F%8E%89%0A%0Ahttps%3A%2F%2Fgithub.com%2Fsmart7796%2FModule01%0A%0A%23GitHubSkills%20%23OpenSource%20%23GitHubLearn" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.shields.io/badge/Share%20on%20X-1da1f2?style=for-the-badge&logo=x&logoColor=white" alt="Share on X" />
-</a>
-<a href="https://bsky.app/intent/compose?text=I%20just%20completed%20the%20%22Introduction%20to%20Git%22%20GitHub%20Skills%20hands-on%20exercise!%20%F0%9F%8E%89%0A%0Ahttps%3A%2F%2Fgithub.com%2Fsmart7796%2FModule01%0A%0A%23GitHubSkills%20%23OpenSource%20%23GitHubLearn" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.shields.io/badge/Share%20on%20Bluesky-0085ff?style=for-the-badge&logo=bluesky&logoColor=white" alt="Share on Bluesky" />
-</a>
-<a href="https://www.linkedin.com/feed/?shareActive=true&text=I%20just%20completed%20the%20%22Introduction%20to%20Git%22%20GitHub%20Skills%20hands-on%20exercise!%20%F0%9F%8E%89%0A%0Ahttps%3A%2F%2Fgithub.com%2Fsmart7796%2FModule01%0A%0A%23GitHubSkills%20%23OpenSource%20%23GitHubLearn" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.shields.io/badge/Share%20on%20LinkedIn-0077b5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Share on LinkedIn" />
-</a>
+## ⌨️ 操作方式
 
-### 🎯 What's Next?
+- 左右方向鍵：移動方塊
+- 上方向鍵：旋轉方塊
+- 下方向鍵：快速下落
+- 空白鍵：直接落到底部
+- P：暫停 / 繼續
 
-**Keep the momentum going!**
+## 🧠 遊戲規則
 
-[![](https://img.shields.io/badge/Return%20to%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/smart7796/Module01/issues/1)
-[![GitHub Skills](https://img.shields.io/badge/Explore%20GitHub%20Skills-000000?style=for-the-badge&logo=github&logoColor=white)](https://learn.github.com/skills))
+1. 方塊會不斷從上方落下。
+2. 你需要在底部或其他方塊之間安排位置。
+3. 當一段區域和目標圖樣完全相符時，該區域會被清除。
+4. 清除成功後會加分，並更新下一個目標圖樣。
+5. 若積木堆疊到達上方邊界，遊戲結束。
 
-*There's no better way to learn than building things!* 🚀
+## 🛠️ 專案結構
 
-</div>
+```text
+mod01/
+├── src/
+│   ├── index.html
+│   ├── index.js
+│   ├── patterns.js
+│   └── style.css
+├── README.md
+└── LICENSE
+```
 
----
+## ▶️ 如何執行
 
-&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+這是一個純前端的 HTML / CSS / JavaScript 專案，最簡單的方式是直接開啟 `src/index.html`。
+
+如果你想使用本機伺服器，也可以在專案根目錄執行：
+
+```bash
+python -m http.server 8000
+```
+
+然後在瀏覽器中打開：
+
+```text
+http://localhost:8000/src/index.html
+```
+
+## ✨ 專案特色
+
+- 以開發者風格為主題的配色與命名
+- 目標圖樣會隨機切換，增加挑戰性
+- 休閒型方塊遊戲規則，簡單好上手
+- 練習 HTML、CSS 與 JavaScript 的互動邏輯
+
+## 📌 備註
+
+這個遊戲適合拿來練習：
+- DOM 操作
+- Canvas 繪圖
+- 事件監聽
+- 遊戲邏輯與狀態管理
+
+如果你想進一步改進這個遊戲，可以加入：
+- 音效
+- 分級難度
+- 多人模式
+- 更完整的消除與連擊系統
 
